@@ -37,6 +37,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: 4px 4px 4px rgb(80, 80, 80);
 }
 
 .login__title {
