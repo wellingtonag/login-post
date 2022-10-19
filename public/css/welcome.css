@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*o limite é a borda da caixa*/
+    text-align: center;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .container {
+    padding: 40px 0;
+    background: #fff;
+  }
+  
+  .page_welcome img {
+    width: 100%;
+  }
+  
+  .text-center {
+    padding-top: 10px;
+    font-size: 90px;
+    font-family: "Tangerine", sans-serif;
+    text-shadow: 4px 4px 4px rgb(141, 141, 141);
+  }
+  
+  .image_bg {
+    background-image: url(http://1.bp.blogspot.com/-6zKB236N_jk/UwyEMwwTnGI/AAAAAAAAOUI/IGIZyvaKYAY/s1600/ec304af6768483da48456293191b3c78.gif);
+    background-repeat: no-repeat;
+    background-color: rgba(179,179,179,255);
+    width: 100%;
+    height: 400px;
+    background-position: center;
+  }
+  
+  .content_box {
+    margin-top: -50px;
+  }
+  
+  .content_box h3 {
+    font-family: "Tangerine", sans-serif;
+    font-size: 48px;
+    text-shadow: 4px 4px 4px rgb(141, 141, 141);  
+  }
+  
+  .content_box p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 0.9em;
+    padding: 5px;
+  }
+  
+  .link_welcome {
+    color: rgba(14, 14, 14, 0.904) !important;
+    padding: 10px 20px;
+    background: rgba(179,179,179,255);
+    margin: 20px 0;
+    outline: none;
+    display: inline-block;
+    animation: pulse 3s infinite;
+    border: unset;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.9em;
+    transition: .3s ease-in-out;
+  }
+
+  .link_welcome:hover {
+    background: #39ac31;
+    color: rgb(255, 255, 255) !important;
+    
+  }
+  
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 rgb(212, 148, 10);
+      transform: rotateZ(0deg) translateY(0);
+    }
+    6% {
+      transform: rotateZ(15deg);
+    }
+    12% {
+      transform: rotateZ(-5deg) translateY(-20px);
+    }
+    18% {
+      transform: rotateZ(5deg) translateY(-10px);
+    }
+    24% {
+      transform: rotateZ(0deg) translateY(0);
+    }
+    33% {
+      box-shadow: 0 0 20px 15px rgba(10, 197, 212, 0);
+    }
+    100% {
+      box-shadow: 0 0 20px 15px rgba(10, 197, 212, 0);
+    }
+  }
+  
+@media (max-width:400px) {
+  .text-center{
+    font-size: 70px;
+  }
+}
