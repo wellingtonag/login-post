@@ -1,6 +1,6 @@
 const express = require("express");
-const bodyParser = require("body-parser");
 const app = express();
+const bodyParser = require("body-parser");
 const path = require("path");
 const router = express.Router();
 
@@ -11,7 +11,6 @@ app.engine("html", require("ejs").renderFile);
 
 router.get("/", (req, res) => {
   res.sendFile(path.join(`${__dirname}/pages/index.html`));
-  
 });
 
 router.post("/welcome", (req, res) => {
@@ -21,6 +20,6 @@ router.post("/welcome", (req, res) => {
 });
 
 app.use("/", router);
-app.listen(process.env.port || 3000);
-
+app.listen(process.env.port || 3000) 
+	console.log('Servidor de exemplo aberto na porta: 3000');
 
