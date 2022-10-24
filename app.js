@@ -1,28 +1,35 @@
-var express = require("express");
-var app = express();
-var bodyParser = require("body-parser");
-var path = require("path");
-var router = express.Router();
-
-app.use(bodyParser.json()); // support json encoded bodies
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static("public"));
-app.engine("html", require("ejs").renderFile);
-
-app.use("/", router);
-var port = process.env.PORT || 3000;
-app.listen(port);
-// app.listen(process.env.port || 3000);
-console.log("Servidor de exemplo aberto na porta: 3000");
-
-app.get("/*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./", "src", "pages", "index.html"));
-});
-
-router.post("/welcome", (req, res) => {
-  res.render(path.join(__dirname, "./", "src", "pages", "welcome.html"), {
-    name: req.body.name,
-  });
-});
-
-module.exports = router;
+{
+  "name": "engine",
+  "version": "1.0.0",
+  "description": "Projeto desenvolvido conforme solicitado no PTI - Anhanguera.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "author": "well",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-validator": "^2.20.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wellingtonag/login-post.git"
+  },
+  "keywords": [
+    "api",
+    "gateway",
+    "javascript"
+  ],
+  "bugs": {
+    "url": "https://github.com/wellingtonag/login-post/issues"
+  },
+  "homepage": "https://github.com/wellingtonag/login-post#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
